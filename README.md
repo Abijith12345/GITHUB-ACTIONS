@@ -39,3 +39,4 @@ In conclusion, Jenkins is better suited for complex and large-scale automation t
 * If we want to use the github on the fullest you can go with githubactions.
 * need to mention the steps in yaml file  on the location of repo ->        .github/workflows
 * in the yaml file need to metion when it can trigger in <b>on</b>  as pull onr push
+* we can select the runner as well in the yaml file as  self hosted or github hosted runtime
