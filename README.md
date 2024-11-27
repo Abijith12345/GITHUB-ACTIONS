@@ -27,6 +27,8 @@ In conclusion, Jenkins is better suited for complex and large-scale automation t
 
 * we can setup the runner by the command by the github provide.
 
+* need to install sh service and make it run so when ever the chage detected the runner willl execute by it self
+
 
 # SECRETS IN GIHUB
 
@@ -40,3 +42,5 @@ In conclusion, Jenkins is better suited for complex and large-scale automation t
 * need to mention the steps in yaml file  on the location of repo ->        .github/workflows
 * in the yaml file need to metion when it can trigger in <b>on</b>  as pull onr push
 * we can select the runner as well in the yaml file as  self hosted or github hosted runtime
+
+
