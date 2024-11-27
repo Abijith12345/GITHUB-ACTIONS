@@ -1,17 +1,21 @@
-name: python simple build
-on :[push]
+name: Python package
+
+on: [push]
+
 jobs:
   build:
 
-    runs-on : ubuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
-      - name: set up python
-
+      - name: Set up Python
+        # This is the version of the action for setting up Python, not the Python version.
         uses: actions/setup-python@v5
         with:
-          python-versoin: '3.x'
-
-      - name: run the python code
-        run : pyton simple.py
+          # Semantic version range syntax or exact version of a Python version
+          python-version: '3.x'
+      
+      # You can test your matrix by printing the current Python version
+      - name: running code
+        run: python simple.py
