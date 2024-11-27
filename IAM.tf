@@ -1,15 +1,12 @@
 
-data "aws_ssm_parameter" "access_key" {
-  name = "access_key"
-}
+#the values will be get by the git secretes in yaml file in actions
+variable "access_key" { }
+variable "secret_key" { }
 
-data "aws_ssm_parameter" "secret_key" {
-  name = "secret_key"
-}
 
 provider "aws" {
-  access_key = "${data.aws_ssm_parameter.access_key.value}"
-  secret_key = "${data.aws_ssm_parameter.secret_key.value}"
+  access_key = var.access_key
+  secret_key = var.secret_key
   region ="us-east-1"
 }
 
